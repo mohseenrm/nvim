@@ -35,6 +35,11 @@ return {
     end,
   },
 
+  {
+    "lewis6991/gitsigns.nvim",
+    lazy = true,
+  },
+
   -- change some telescope options and a keymap to browse plugin files
   {
     "nvim-telescope/telescope.nvim",
