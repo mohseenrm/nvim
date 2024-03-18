@@ -431,6 +431,7 @@ return {
     event = "VeryLazy",
     ---@type Flash.Config
     opts = {
+      label = { style = "overlay" },
     },
     -- stylua: ignore
     keys = {
