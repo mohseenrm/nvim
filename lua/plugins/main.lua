@@ -429,6 +429,7 @@ return {
   {
     "folke/flash.nvim",
     event = "VeryLazy",
+    enabled = false,
     ---@type Flash.Config
     opts = {
       label = { style = "overlay" },
