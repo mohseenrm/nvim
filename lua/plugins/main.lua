@@ -168,6 +168,7 @@ return {
         "python",
         "query",
         "regex",
+        "swift",
         "tsx",
         "typescript",
         "vim",
@@ -307,6 +308,11 @@ return {
           },
         },
       },
+      config = function()
+        local lspconfig = require("lspconfig")
+        lspconfig.sourcekit.setup({
+        })
+      end,
       setup = {
         eslint = function()
           local function get_client(buf)
