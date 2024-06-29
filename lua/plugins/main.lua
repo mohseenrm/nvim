@@ -224,7 +224,8 @@ return {
         "shfmt",
         "flake8",
         "typescript-language-server",
-        "prettier"
+        "prettier",
+        "sql-formatter"
       },
     },
   },
