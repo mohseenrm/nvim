@@ -225,7 +225,8 @@ return {
         "flake8",
         "typescript-language-server",
         "prettier",
-        "sql-formatter"
+        "sql-formatter",
+        "black"
       },
     },
   },
@@ -386,6 +387,7 @@ return {
         ["markdown.mdx"] = { "prettier" },
         ["graphql"] = { "prettier" },
         ["handlebars"] = { "prettier" },
+        ["python"] = { "black" },
       },
     },
   },
