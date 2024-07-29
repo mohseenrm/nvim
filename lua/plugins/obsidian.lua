@@ -10,6 +10,7 @@ wk.add({
   { "<leader>on", "<cmd>ObsidianNew<cr>", desc = "New Note", mode = "n" },
   { "<leader>os", "<cmd>ObsidianSearch<cr>", desc = "Search Notes", mode = "n" },
   { "<leader>ow", "<cmd>ObsidianWorkspace<cr>", desc = "Change Workspace", mode = "n" },
+  { "<leader>oo", "<cmd>ObsidianOpen<cr>", desc = "Open (needs to be open in buffer)", mode = "n" },
 })
 
 return {
