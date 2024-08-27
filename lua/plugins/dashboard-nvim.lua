@@ -1,15 +1,6 @@
 return {
   "nvimdev/dashboard-nvim",
   event = "VimEnter",
-  -- config = function()
-  --   require("dashboard").setup({
-  --     options = function()
-  --       return {
-  --         theme = "doom",
-  --       }
-  --     end,
-  --   })
-  -- end,
   opts = function()
     local lolcat = vim.fn.executable("lolcat") == 1
     local opts = {
