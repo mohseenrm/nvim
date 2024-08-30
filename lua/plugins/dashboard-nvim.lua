@@ -9,7 +9,7 @@ return {
         statusline = false,
       },
       preview = lolcat and {
-        command = "lolcat -p 1 --animate --duration 1",
+        command = "lolcat -p 1",
         file_path = vim.fn.stdpath("config") .. "/logo/banner.txt",
         file_width = 90,
         file_height = 10,
