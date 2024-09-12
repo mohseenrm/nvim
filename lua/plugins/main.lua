@@ -151,7 +151,7 @@ return {
 
   -- for typescript, LazyVim also includes extra specs to properly setup lspconfig,
   -- treesitter, mason and typescript.nvim. So instead of the above, you can use:
-  { import = "lazyvim.plugins.extras.lang.typescript" },
+  -- { import = "lazyvim.plugins.extras.lang.typescript" },
 
   -- add more treesitter parsers
   {
@@ -223,31 +223,14 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
-        "typescript-language-server",
+        -- "typescript-language-server",
         "prettier",
         "sql-formatter",
         "black"
       },
     },
   },
-
-  { "echasnovski/mini.nvim", version = false },
-
-  {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-    init = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 300
-    end,
-    opts = {
-      preset = "modern",
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  },
-
+  { "williamboman/mason-lspconfig.nvim" },
   {
     "neovim/nvim-lspconfig",
     -- other settings removed for brevity
@@ -304,6 +287,22 @@ return {
     },
   },
 
+  { "echasnovski/mini.nvim", version = false },
+
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
+    opts = {
+      preset = "modern",
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  },
   -- Use <tab> for completion and snippets (supertab)
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
   {
