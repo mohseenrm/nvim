@@ -170,6 +170,7 @@ return {
         "regex",
         "swift",
         "tsx",
+        "rust",
         "typescript",
         "vim",
         "yaml",
