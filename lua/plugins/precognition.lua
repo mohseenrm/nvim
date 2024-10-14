@@ -4,7 +4,7 @@ return {
   opts = {
     startVisible = true,
     showBlankVirtLine = true,
-    highlightColor = { link = "Comment" },
+    highlightColor = { link = "HighLight" },
     -- hints = {
     --      Caret = { text = "^", prio = 2 },
     --      Dollar = { text = "$", prio = 1 },
