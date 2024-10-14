@@ -171,6 +171,7 @@ return {
         "swift",
         "tsx",
         "rust",
+        "ron",
         "typescript",
         "vim",
         "yaml",
@@ -243,6 +244,21 @@ return {
           settings = {
             -- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
             workingDirectories = { mode = "auto" },
+          },
+        },
+        taplo = {
+          keys = {
+            {
+              "K",
+              function()
+                if vim.fn.expand("%:t") == "Cargo.toml" and require("crates").popup_available() then
+                  require("crates").show_popup()
+                else
+                  vim.lsp.buf.hover()
+                end
+              end,
+              desc = "Show Crate Documentation",
+            },
           },
         },
       },
@@ -322,6 +338,15 @@ return {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
+      {
+        "Saecki/crates.nvim",
+        event = { "BufRead Cargo.toml" },
+        opts = {
+          completion = {
+            cmp = { enabled = true },
+          },
+        },
+      },
     },
     -- Not all LSP servers add brackets when completing a function.
     -- To better deal with this, LazyVim adds a custom option to cmp,
@@ -356,13 +381,13 @@ return {
           end,
         }),
         sources = cmp.config.sources({
+          { name = "crates" },
           { name = "copilot", group_index = 2 },
           { name = "nvim_lsp" },
           { name = "path" },
           { name = "emoji" },
-        }, {
-            { name = "buffer" },
-          }),
+          { name = "buffer" },
+        }),
         formatting = {
           format = function(entry, item)
             local icons = LazyVim.config.icons.kinds
