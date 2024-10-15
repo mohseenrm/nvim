@@ -41,6 +41,9 @@ return {
     "preservim/vim-markdown",
   },
   opts = {
+    ui = {
+      enable = false,
+    },
     workspaces = {
       {
         name = "work",
